@@ -8,7 +8,9 @@ body {
 	background:#f0f0f0;               /* 背景颜色 */
 }
 div,dl,dt,dd,h1,h2,h3,h4,h5,h6,ul,pre,form,fieldset,input,textarea,p,blockquote{margin:0;padding:0;}
-img {border:0px;}
+img {border:0px;
+max-width: 100%;
+max-height: 100%;}
 ol,li{margin:0;padding:0; list-style-type:none;}
 .left{float:left;}
 .mid{margin:0px auto;}
@@ -17,30 +19,37 @@ a{text-decoration:none; color:#3e3e3e;}
 .inclear{width:100%; height:10px; clear:both;}
 
 /* 以上为公共样式区域 */
-
+@media only screen and (min-width: 320px){html {font-size: 62.5%!important;}}
+@media only screen and (min-width: 360px){html {font-size: 72.5%!important;}}
+@media only screen and (min-width: 400px){html {font-size: 82.5%!important;}}
+@media only screen and (min-width: 480px){html {font-size: 94%!important;}}
 
 /* 顶部区域 */
 .top{
   width: 100%;
-  height: 111px;
+  /*height: 111px;*/
   background: #434749;
 }
 
 .top_k{
-  width: 1200px;
-  height: 111px;
+  max-width: 1200px;
+  max-height: 111px;
   margin:auto 0;                      /*垂直居中*/
   padding: 5px 10px;
   display: flex;                      /*设置导航链接水平等距分布*/
-	justify-content: space-around;      /*设置导航链接水平等距分布*/
-
+	justify-content: space-around;     /*设置导航链接水平等距分布*/
+	align-items: center;
 }
 /* 链接区域 */
 .top_ktl{
-  margin:auto 0;                      /*垂直居中*/
+	margin:auto 0;                      /*垂直居中*/
   padding: 5px 10px;
-  color: #ffffff;
-  font-size: 18px;
+	margin-right: 15px;
+	color: #ffffff;
+
+}
+.top_ktl a{
+  font-size: large;
 }
 /* 链接被选中样式 */
 .top_ktl:hover{
@@ -89,14 +98,14 @@ a{text-decoration:none; color:#3e3e3e;}
 /* 图片轮播区域 */
 .ppt_black{
   width: 100%;
-  height: 400px;
+  /*height: 400px;*/
   background: #54595C;
   border-top: 1px dashed #686C6D;
   border-bottom: 1px solid #8B9395;
   box-shadow: 0px 2px 10px #888888;   /* 边框增加阴影 */
 }
 .pptWrapper{
-  width: 1200px;
+  /*width: 1200px;*/
   background: #54595C;
 	max-height: 100%;
 	display: flex;
@@ -181,19 +190,19 @@ a{text-decoration:none; color:#3e3e3e;}
 /* SERVER部分开始 */
 .ser{
   width: 100%;
-  height: 450px;
+  /*height: 450px;*/
   margin:0px auto;
   box-shadow: 0px 2px 10px #888888;   /* 边框增加阴影 */
 	z-index:9999；
 }
 .serk{
-	width: 1000px;
-	height: 450px;
+	max-width: 1000px;
+	/*height: 450px;*/
 }
 
 .ser_t{
-  width: 1000px;
-  height: 45px;
+  /*width: 1000px;
+  height: 45px;*/
   padding: 10px 0px;
 
 }
@@ -207,7 +216,7 @@ a{text-decoration:none; color:#3e3e3e;}
   justify-content: space-around;
   color: grey;
   font-size: small;
-	width: 925px;
+	/*width: 925px;*/
 }
 .serItem img{
     max-width: 100%;
@@ -247,18 +256,21 @@ a{text-decoration:none; color:#3e3e3e;}
 /* PORTFOLIO部分开始 */
 .por{
 	width: 100%;
-	height: 590px;
+	/*height: 590px;*/
 	margin:0px auto;
 	box-shadow: 0px 2px 5px #888888;
 	background: #E8E9EA;
 	z-index:9998；
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .pork{
-	width: 1000px;
-	height: 590px;
+	max-width: 1000px;
+	/*height: 590px;*/
 }
 .por_t{
-	width: 1000px;
+	/*width: 1000px;*/
   height: 45px;
   padding-left: 10px;
 	padding-top: 20px;
@@ -270,33 +282,39 @@ a{text-decoration:none; color:#3e3e3e;}
   color: #5B686E;
 }
 .porpk{
-	width: 1000px;
-	height: 440px;
+	max-width: 1000px;
+	/*height: 440px;*/
 	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 .porl{
-	width: 390px;
-	height: 440px;
+	max-width: 390px;
+	/*height: 440px;*/
 }
 .porlphoto{
-	width: 190px;
-	height: 140px;
+	max-width: 190px;
+	max-height: 140px;
 	box-shadow: 0px 1px 2px #888888;
 	float: left;
 	margin: 4px 2px;
 }
+.porlphoto img{
+	max-width: 100%;
+	max-height: 100%;
+}
 .porm{
-	width: 375px;
-	height: 440px;
+	max-width: 375px;
+	/*height: 440px;*/
 	background: #575F61;
+	max-width: 375px;
 }
 .porm_x{
 	height: 18px;
 }
 .porm_p{
-	width: 340px;
-	height: 210px;
+	max-width: 340px;
+	max-height: 210px;
 	margin-top:20px;
 	margin-left: 17.5px;
 }
@@ -323,26 +341,30 @@ a{text-decoration:none; color:#3e3e3e;}
 	font-size: 14px;
 }
 .porr{
-	width: 190px;
+	max-width: 190px;
 	height: 440px;
 }
 
 /* PORTFOLIO结束部分 */
+
 /* BOLG开始部分 */
 .blo{
 	width: 100%;
-	height: 330px;
+	/*height: 330px;*/
 	margin:0px auto;
 	box-shadow: 0px 2px 5px #888888;
 	background: #FBFCFC;
 	z-index:9997；
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .blok{
-	width: 1000px;
-	height: 330px;
+	max-width: 1000px;
+	/*height: 330px;*/
 }
 .blo_t{
-	width: 1000px;
+	max-width: 1000px;
   height: 45px;
   padding-left: 10px;
 	padding-top: 20px;
@@ -354,24 +376,24 @@ a{text-decoration:none; color:#3e3e3e;}
   color: #5B686E;
 }
 .blo_nk{
-	width: 1000px;
-	height: 150px;
+	max-width: 1000px;
+	/*height: 150px;*/
 	display: flex;
 	justify-content: center;
 }
 .blo_n{
-	width: 470px;
-	height: 150px;
+	max-width: 470px;
+	/*height: 150px;*/
 	display: flex;
 	justify-content: center;
 }
 .blo_nl{
-	width: 178px;
-	height: 150px;
+	max-width: 178px;
+	/*height: 150px;*/
 }
 .blo_nr{
-	width: 292px;
-	height: 150px;
+	max-width: 292px;
+	/*height: 150px;*/
 	margin-left: 10px;
 }
 .blo h3{
@@ -399,28 +421,28 @@ a{text-decoration:none; color:#3e3e3e;}
 /* ABOTU部分开始 */
 .abo{
 	width: 100%;
-	height: 430px;
+	/*max-height: 430px;*/
 	background: #5F666A;
 	border-top: 2px solid #8A9294;
   box-shadow: 0px 2px 10px #888888;
 }
 .abok{
-	width: 1000px;
-	height: 430px;
+	max-width: 1000px;
+	/*max-height: 430px;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .abo_n{
-	width: 990px;
-	height: 375px;
+	max-width: 990px;
+	/*max-height: 375px;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .abo_nl{
-	width: 300px;
-	height: 375px;
+	max-width: 300px;
+	/*height: 375px;*/
 	margin-right: 20px;
 }
 .abo_n h3{
@@ -444,15 +466,15 @@ a{text-decoration:none; color:#3e3e3e;}
 	margin-top:10px;
 }
 .abo_nr{
-	width: 310px;
-	height: 375px;
+	max-width: 310px;
+	max-height: 375px;
 }
 .abo_nr h3{
 	border-bottom: 1px dotted grey;
 	padding-bottom: 10px;
 }
 .abo_nr input{
-	width: 217px;
+	max-width: 217px;
 	border: 1px solid #525659;
 	padding: 10px;
 	padding-left: 20px;
@@ -469,7 +491,7 @@ a{text-decoration:none; color:#3e3e3e;}
 /* foot部分开始 */
 .foot{
 	width: 100%;
-	height: 80px;
+	max-height: 80px;
 	background: #404646;
 }
 .foot_t{
